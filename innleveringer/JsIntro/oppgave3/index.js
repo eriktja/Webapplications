@@ -23,18 +23,21 @@ const button = document.querySelector("button");
 
 let wrongCount = 0;
 let position = 0;
+let wordLength = 0;
 let word = "";
 
 let words = ["hei", "på", "deg", "counting", "objects", "compressing", "git", "status", "push", "pull", "upstream", "fetch", "branch", "nothing", "to", "commit"];
 
 button.addEventListener("click", () => {
-    let word = words[rand()];
+    word = words.pop([rand()]);
+    wordLength = word.length;
     write(word);
     button.disabled = true;
+    wordGame();
 });
 
-const write = (word) => {
-    wordId.innerHTML += ` <b>${word}</b>,`;
+const write = (w) => {
+    wordId.innerHTML += ` <b>${w}</b>,`;
 }
 
 const rand = () => {
@@ -44,4 +47,10 @@ const rand = () => {
 letterId.addEventListener("keyup", (e) => {
     let key = e.key;
     console.log(key);
+    debugger
 })
+
+const wordGame = () => {
+    while(words.length > 0){
+    }
+}

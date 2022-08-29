@@ -16,4 +16,6 @@ const longestWord = () => {
   return longest;
 };
 
-console.log(longestWord());
+const theWord = longestWord();
+console.log(theWord);
+document.getElementById("word").innerHTML = `<b>${theWord}</b>`;
