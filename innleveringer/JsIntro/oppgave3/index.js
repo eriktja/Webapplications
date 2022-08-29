@@ -1,5 +1,3 @@
-import "./styles.css";
-
 // TODO: Sett startverdien for de ulike tellerene du trenger for å ha kontroll på
 // - antall feil
 // - posisjonen til bokstaven du skal skrive
@@ -17,3 +15,33 @@ import "./styles.css";
 // - Vise hvor langt vi har kommet (posisjonen) på det ordet vi skal skrive
 // TODO: Lytt til keyup på window
 // TODO: Lytt til klikk på knappen. Klikket skal gjøre knappen "disabled" samt starte oppgaven
+
+const wordId = document.getElementById("word");
+const letterId = document.getElementById("letter");
+const wrongId = document.getElementById("wrongs");
+const button = document.querySelector("button");
+
+let wrongCount = 0;
+let position = 0;
+let word = "";
+
+let words = ["hei", "på", "deg", "counting", "objects", "compressing", "git", "status", "push", "pull", "upstream", "fetch", "branch", "nothing", "to", "commit"];
+
+button.addEventListener("click", () => {
+    let word = words[rand()];
+    write(word);
+    button.disabled = true;
+});
+
+const write = (word) => {
+    wordId.innerHTML += ` <b>${word}</b>,`;
+}
+
+const rand = () => {
+    return Math.floor(Math.random() * words.length);
+}
+
+letterId.addEventListener("keyup", (e) => {
+    let key = e.key;
+    console.log(key);
+})
