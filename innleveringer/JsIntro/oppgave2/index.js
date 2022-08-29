@@ -13,6 +13,9 @@ const users = [
 ];
 
 const userUl = document.getElementById("users");
+const searchId = document.getElementById("name");
+const ageId = document.getElementById("age");
+const buttonId = document.getElementById("filter");
 
 const createTableUI = (users) => {
   userUl.innerHTML = null;
@@ -22,6 +25,45 @@ const createTableUI = (users) => {
   }
 };
 
+// SØK PÅ NAVN
+searchId.addEventListener("input", (e) => {
+  const search = e.target.value;
+  if(search === ""){
+    createTableUI(users);
+  }
+  else {
+    createTableUI(filterArray(e));
+  }
+});
+const filterArray = (e) => {
+  let res = [];
+  const search = e.target.value;
+  users.forEach((user) => {
+      if (user.name.toLowerCase().includes(search.toLowerCase())) {
+        res.push(user);
+    }
+  });
+  return res;
+}
+
+// FILTRER PÅ MINIMUMSALDER
+buttonId.addEventListener("click", () => {
+  let age = Number(ageId.value);
+  console.log(age);
+  let res = [];
+  users.forEach((user) => {
+    if(user.age > age){
+      res.push(user);
+    }
+  })
+  if(age == 0){
+    createTableUI(users);
+  }
+  else{
+    createTableUI(res);
+  }
+})
+  
 // TODO: Hent HTML #id med getElementById
 // TODO: Lag en funksjon som kan brukes til å skrive ut HTMLen for å se brukerene. Du kan bruke users importert over for å hente en liste med 10 brukere
 // TODO: Lag en funksjon som håndterer søket og oppdaterer grensesnittet med resultatet fra søket
