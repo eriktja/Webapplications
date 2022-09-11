@@ -1,3 +1,8 @@
+
+const obj = {a:1, b:1, c:1}; 
+const { a, ...leftOvers } = obj;
+console.log(a, leftOvers)
+
 const prompt = require('prompt-sync')();
 
 let lang = prompt("Norsk(no) | Engligh(en): ");
@@ -35,3 +40,4 @@ switch(lang){
         console.log("ERROR! Not a registered language");
     }
 }
+
