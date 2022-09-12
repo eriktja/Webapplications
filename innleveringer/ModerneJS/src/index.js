@@ -12,6 +12,7 @@ try {
 
     // Don't make changes below this line
 
+    
     expect(myDemo).toBe("This is a demo");
 
     solved++;
