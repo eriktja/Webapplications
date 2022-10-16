@@ -11,3 +11,9 @@ export function question(answer, index) {
     })
     return value
 }
+
+export function checkHelper(index){
+    const { helper } = questions[index]
+
+    return helper
+}
