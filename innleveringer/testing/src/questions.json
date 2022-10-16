@@ -18,7 +18,8 @@
                 "option": "Ingen pinner er like", 
                 "correct": true
             }
-        ]
+        ], 
+        "helper": "Gå ut i skogen og sjekk"
     },
     {
         "question": "Kakkehakaiakkakai?",
@@ -39,7 +40,8 @@
                 "option": "Kahakano", 
                 "correct": true
             }
-        ]
+        ],
+        "helper": "Se Kai og Kai kjøper kano"
     },
     {
         "question": "Knock knock",
@@ -60,7 +62,8 @@
                 "option": "Who's there?", 
                 "correct": true
             }
-        ]
+        ],
+        "helper": "google knock knock joke"
     },
     {
         "question": "Hvem er best?",
@@ -81,6 +84,7 @@
                 "option": "Simen", 
                 "correct": true
             }
-        ]
+        ],
+        "helper": "You had to be there"
     }
 ]
