@@ -1,0 +1,86 @@
+[
+    {
+        "question": "Hvor lang er en pinne?",
+        "answers": [
+            { 
+                "option": "Velding lang",
+                "correct": false
+            },
+            { 
+                "option": "Skikkelig kort",
+                "correct": false
+            },
+            { 
+                "option": "Litt midt i mellom",
+                "correct": false
+            },
+            { 
+                "option": "Ingen pinner er like", 
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "Kakkehakaiakkakai?",
+        "answers": [
+            { 
+                "option": "Hva?" ,
+                "correct": false
+            },
+            { 
+                "option": "Ja",
+                "correct": false
+            },
+            { 
+                "option": "Nei",
+                "correct": false
+            },
+            { 
+                "option": "Kahakano", 
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "Knock knock",
+        "answers": [
+            { 
+                "option": "That's what she said",
+                "correct": false
+            },
+            { 
+                "option": "Joe who?",
+                "correct": false
+            },
+            { 
+                "option": "What is this?",
+                "correct": false
+            },
+            { 
+                "option": "Who's there?", 
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "Hvem er best?",
+        "answers": [
+            { 
+                "option": "Erik" ,
+                "correct": false
+            },
+            { 
+                "option": "Ole",
+                "correct": false
+            },
+            { 
+                "option": "Tom-Heine",
+                "correct": false
+            },
+            { 
+                "option": "Simen", 
+                "correct": true
+            }
+        ]
+    }
+]
