@@ -35,7 +35,7 @@ export default function Form() {
         if(isValidInput(data)) {
             try {
                 data.id = people.length + 1
-                const response = await axios.post('http://localhost:3000/api/people', data)
+                const response = await axios.post('../api/people', data)
                 console.log(response?.status)
                 if (response?.status == 201) {
                     setSuccess(true)
@@ -55,7 +55,7 @@ export default function Form() {
 
     const getPeople = async () => {
         try  {
-            const response = await axios.get('http://localhost:3000/api/people')
+            const response = await axios.get('../api/people')
             console.log(response.status)
             if(response?.status == 200){
                 setPeople(response.data)
